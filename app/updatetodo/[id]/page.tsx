@@ -4,7 +4,8 @@ import React from 'react';
 
 const page = async ({ params }: { params: { id: string } }) => {
     let id = params.id;
-    let res = await fetch(api_url__todo);
+    let url = `${api_url__todo}/${id}`;
+    let res = await fetch(`${api_url__todo}/${id}`);
     let data = await res.json();
 
     return (

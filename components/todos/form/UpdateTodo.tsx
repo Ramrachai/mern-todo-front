@@ -23,7 +23,7 @@ const UpdateTodoForm = ({ data }: { data: Todo }) => {
         };
 
         // Here you can add the code to send this data to your backend/database
-        let res = await fetch(api_url__todo, {
+        let res = await fetch(`${api_url__todo}/${data._id}`, {
             method: 'PUT',
             body: JSON.stringify(todo),
             headers: {
